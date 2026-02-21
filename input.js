@@ -36,6 +36,9 @@ class InputHandler {
         
         if (result === 'win') {
             showWinScreen();
+        } else if (result === 'stuck') {
+            showStuckMessage();
+            updateGameDisplay();
         } else if (result) {
             updateGameDisplay();
         }

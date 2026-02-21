@@ -152,6 +152,13 @@ body {
     color: #666;
 }
 
+#statusMessage {
+    min-height: 1.2em;
+    margin-bottom: 15px;
+    color: #b00020;
+    font-weight: 600;
+}
+
 #controls button {
     margin: 0 10px;
     padding: 10px 20px;
