@@ -39,6 +39,7 @@ class UIManager {
     startGame() {
         game.initGame(this.currentDifficulty);
         updateGameDisplay();
+        clearGameMessage();
         this.showScreen('gameScreen');
     }
 
@@ -56,6 +57,21 @@ class UIManager {
 function showWinScreen() {
     document.getElementById('winMoves').textContent = game.moves;
     uiManager.showScreen('winScreen');
+}
+
+function showStuckMessage() {
+    setGameMessage('No valid moves left. Restart to try again.');
+}
+
+function setGameMessage(message) {
+    const status = document.getElementById('statusMessage');
+    if (status) {
+        status.textContent = message;
+    }
+}
+
+function clearGameMessage() {
+    setGameMessage('');
 }
 
 // Global UI manager instance
