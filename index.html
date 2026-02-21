@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit Collector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <h1>Bit Collector</h1>
+            <p>Fill the grid with your colour!</p>
+            <div id="difficultyButtons">
+                <button class="difficulty-btn" data-difficulty="easy">Easy (5x5)</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium (8x8)</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard (12x12)</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <div id="gameInfo">
+                <h2>Bit Collector</h2>
+                <div id="stats">
+                    <div id="progressContainer">
+                        <span>Progress:</span>
+                        <div id="progressBar">
+                            <div id="progressFill"></div>
+                        </div>
+                        <span><span id="progress">0</span>%</span>
+                    </div>
+                    <span>Moves: <span id="moves">0</span></span>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div id="controls">
+                <p>Use Arrow Keys or WASD to move</p>
+                <button id="restartBtn">Restart</button>
+                <button id="mainMenuBtn">Main Menu</button>
+            </div>
+        </div>
+
+        <!-- Win Screen -->
+        <div id="winScreen" class="screen">
+            <h1>Level Complete!</h1>
+            <div id="winStats">
+                <p>Moves: <span id="winMoves">0</span></p>
+            </div>
+            <div id="winButtons">
+                <button id="nextLevelBtn" class="difficulty-btn">Next Difficulty</button>
+                <button id="mainMenuBtn2" class="difficulty-btn">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="renderer.js"></script>
+    <script src="input.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>

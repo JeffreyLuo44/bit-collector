@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Start Screen */
+#startScreen {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+#startScreen h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #667eea;
+}
+
+#startScreen p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+#difficultyButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.difficulty-btn {
+    padding: 15px 30px;
+    font-size: 1em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.difficulty-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.difficulty-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Game Screen */
+#gameScreen {
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#gameInfo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#gameInfo h2 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#progressContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#progressBar {
+    width: 150px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #667eea;
+}
+
+#progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#gameCanvas {
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid #667eea;
+    border-radius: 10px;
+    background: white;
+}
+
+#controls {
+    text-align: center;
+}
+
+#controls p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+#controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#controls button:hover {
+    background: #764ba2;
+}
+
+/* Win Screen */
+#winScreen {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+#winScreen h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #667eea;
+}
+
+#winStats {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+#winButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
